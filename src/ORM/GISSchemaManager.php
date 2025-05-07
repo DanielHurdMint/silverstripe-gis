@@ -22,7 +22,7 @@ trait GISSchemaManager
     // Planar spatial data type.
     public function geometry($values)
     {
-        return 'geometry';
+        return 'geometry NOT NULL';
     }
 
     public function translateStGenericFilter($field, $value, $inclusive, $hint)

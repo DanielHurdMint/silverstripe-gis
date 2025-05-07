@@ -27,7 +27,9 @@ class DBGeometry extends DBGeography
                 'type'=>'geometry',
                 'parts' => [
                     'srid' => $this->srid,
-                ]
+                    'null' => 'not null',
+                    'default' => 'ST_GeomFromText(\'POINT(0 0)\')',
+                ],
             ]
         );
     }
